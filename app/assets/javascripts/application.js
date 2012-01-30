@@ -218,7 +218,6 @@ $(function() {
     closeAllSubMenus();
     var button = $(this).parent().addClass('active');
     var menu = $(this).children('div');
-    var h = (button.outerHeight) ? button.outerHeight() : button.height();
     menu.addClass('active')
         .click(function(e) { e.stopPropagation(); })
     $(document).one('click', {button: button}, closeSubMenu);
