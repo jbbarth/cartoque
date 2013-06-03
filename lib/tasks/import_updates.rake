@@ -21,7 +21,7 @@ namespace :import do
             status = "important" if name.match(/^apache2|^bind9$|^firmware-|^heartbeat/)
             status = "important" if name.match(/^ldirector|^libc\d|-(scn|sen)$|^mysql-server/)
             status = "important" if name.match(/^openssh-server|^php5|^postfix|^postgresql-\d/)
-            status = "important" if name.match(/^puppet$/)
+            status = "important" if name.match(/^puppet$|^clamav/)
             pkg[:status] = status
             pkg.stringify_keys
           end
